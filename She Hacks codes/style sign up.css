@@ -1,0 +1,103 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: robot, arial;
+	background-image: url(Phone Logo.png);
+	bagground-position: absolute
+}
+
+
+.sign-up-form 
+{
+	width: 439.88px
+	box-shadow: 0 0 3px 0 #7ED957;
+	background:#C4FFC6;
+	padding: 20px;
+	margin: 8% auto 0;
+	text-align: center;
+}
+.sign-up-form h1
+{
+	font-size: 72px;
+	font-style: bold;
+	font-weight: 700;
+	text-align: left;
+	color:  #008037;
+	line-height: 84px;
+}
+.sign-up-form p
+{
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: left;
+	color:  #575757;
+	line-height: 25px; 
+}
+.label
+{
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: right;
+	color:  #575757;
+	line-height: 35px;
+}
+.input-box
+{
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px 0;
+	width: 200px;
+	border 1px solid green;
+	outline: none;
+}
+button
+{
+	color: green;
+	width: 100px;
+	padding:20px;
+	border-radius: 30px;
+	font-size:100px
+	margin: 10px 0;
+	border: none;	
+	outline: none;
+	cursor: pointer;
+}
+.signup-btn:hover
+{
+	background: #575757;
+	colour: #7ED957;
+}
+
+.aligncenter
+{
+	text-align:center;
+	size: 100px;
+}
+
+.resize {
+	width: 350px;
+	height: auto;
+}
+
+h3
+{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+	color:  #575757;
+	line-height: 25px; 	
+}
+
+h4
+{
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+	color:  #575757;
+	line-height: 25px; 
+}

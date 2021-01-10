@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-content>
+                <v-container fill-height align="center" justify="center"
+                    style="min-width: 100%; min-height: 100%; background-color: black;" @click="test=!test">
+                    <div class="mx-auto my-auto">
+                        <v-row>
+                            <v-col cols="12">
+                                <svg height="100" width="100">
+                                    <circle cx="50" cy="50" r="40" stroke="black" fill="#56CCF2"></circle>
+                                    <text x="50%" y="60%" text-anchor="middle" fill="black" font-size="30px"
+                                        font-family="Arial">MU</text>
+                                </svg>
+                            </v-col>
+                            <v-col cols="12">
+                                <span class="white--text headline">Michael Uti</span>
+                            </v-col>
+                        </v-row>
+                    </div>
+
+                    <video style="min-width: 100%; min-height: 100%;right: 0;bottom: 0;position: fixed; " id="videoTest"
+                        autoplay playsinline>
+                    </video>
+
+                    <v-expand-transition>
+                        <v-row justify="center" v-if="test"
+                            style="bottom: 1rem; padding: 20px; left: 50%; margin-left: -150px; position: absolute;">
+
+                            <v-btn style="position: relative;" class="ml-2" small fab dark @click="callVideo">
+                                <v-icon>mdi-desktop-mac</v-icon>
+                            </v-btn>
+                            <v-btn class="ml-2" fab small dark @click="callVideo">
+                                <v-icon>mdi-video</v-icon>
+                            </v-btn>
+                            <v-btn class="ml-2" color="red" small fab dark @click="callVideo">
+                                <v-icon>mdi-phone-hangup</v-icon>
+                            </v-btn>
+                            <v-btn class="ml-2" small fab dark @click="changeAudioStatus">
+                                <v-icon>{{audioIcon}}</v-icon>
+                            </v-btn>
+                            <v-btn class="ml-2" small fab dark @click="requestFullScreen">
+                                <v-icon>mdi-fullscreen</v-icon>
+                            </v-btn>
+                        </v-row>
+                    </v-expand-transition>
+                </v-container>
+            </v-content>
+        </v-app>
+    </div>
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            test: true,
+            audioIcon: 'mdi-microphone',
+            audioOn: true,
+
+        },
+
+        methods: {
+            callVideo: function () {
+                navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function (stream) {
+                    console.log(stream)
+                    document.getElementById("videoTest").srcObject = stream
+                }).catch(function (error) {
+                    console.log("something bad happened", error);
+                })
+            },
+
+            requestFullScreen: function () {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            },
+
+            changeAudioStatus: function () {
+                if (this.audioOn) {
+                    this.audioIcon = 'mdi-microphone-off'
+                } else {
+                    this.audioIcon = 'mdi-microphone'
+                }
+                this.audioOn = !this.audioOn
+            },
+
+            changeVideoStatus: function () {
+                if (this.audioOn) {
+                    this.audioIcon = 'mdi-microphone-off'
+                } else {
+                    this.audioIcon = 'mdi-microphone'
+                }
+                this.audioOn = !this.audioOn
+            },
+        },
+
+        vuetify: new Vuetify(),
+    })
+</script>
+
+<script>
+    navigator.mediaDevices.getUserMedia({ audio: false, video: true }).then(function (stream) {
+        console.log(stream)
+        document.getElementById("videoTest2").srcObject = stream
+        document.getElementById("videoTest3").srcObject = stream
+        document.getElementById("videoTest4").srcObject = stream
+    }).catch(function (error) {
+        console.log("something bad happened", error);
+    })
+</script>

@@ -1,0 +1,99 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #C4FFC6;
+}
+h1 {
+	font-family: Roboto, arial,"Times New Roman";
+	font-size: 72px;
+	font-style: bold;
+	font-weight: 700;
+	text-align: left;
+	color:  #008037;
+	line-height: 84px;
+}
+h2 {
+	font-family: Roboto, arial,"Times New Roman";
+	margin: 1;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: left;
+	color:  #575757;
+	line-height: 35px;
+
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.container {
+  width: 40%;
+  margin: 30px auto;
+}
+.tag-container {
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 6px;
+  overflow-x: scroll;
+}
+.tag-container .tag {
+  height: 30px;
+  margin: 5px;
+  padding: 5px 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #eee;
+  display: flex;
+  align-items: left;
+  color: #333;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff;
+  cursor: default;
+}
+.tag i {
+  font-size: 16px;
+  color: #666;
+  margin-left: 5px;
+}
+.tag-container input {
+  padding: 5px;
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  font-family: 'Rubik';
+  color: #333;
+  flex: 1;
+}
+
+.reason {
+	width: 180px;
+	display: right;
+	text-align: left;
+	vertical-align: top;
+	margin-bottom: 0px;

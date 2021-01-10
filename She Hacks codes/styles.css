@@ -1,0 +1,81 @@
+body{
+  margin-right: 80px;
+  padding: 0;
+  font-family: roboto, arial;
+  background: #C4FFC6;
+}
+
+h1 {
+	font-family: Roboto, arial,"Times New Roman";
+	font-size: 72px;
+	font-style: bold;
+	font-weight: 700;
+	text-align: center;
+	color:  #008037;
+	line-height: 84px;
+}
+p {
+	font-family: Roboto, arial,"Times New Roman";
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+	color:  #575757;
+	line-height: 35px;
+
+}
+
+button
+{
+	color: #008037;
+	width: 300px;
+	padding:25px;
+	border-radius: 20px;
+	font-size:30px
+	margin: 100px 30;
+	border: 3px solid #008037;	
+	outline: none;
+	cursor: pointer;
+	text-allign: center;
+}
+img
+{
+	display: block;
+	margin: 0 auto 0 auto;
+}
+h3 {
+    float:right;
+}
+
+.login-btn:hover{
+	background: #C4FFC6;
+	colour: #008037;
+}
+.signup-btn:hover{
+	background: #C4FFC6;
+	colour: #008037;
+}
+
+.text-center{
+	text-align: center;
+}
+
+h4 
+{
+	font-family: Roboto, arial,"Times New Roman";
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+	color:  #575757;
+	line-height: 35px;
+
+}
+
+.buzzy 
+{
+	display: flex;
+	margin: 0 auto 0 auto;
+	width: 200px;
+	text-align: left;
+}

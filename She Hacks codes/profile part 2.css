@@ -1,0 +1,78 @@
+body{
+  margin: 1;
+  padding: 10;
+  font-family: roboto, arial;
+  background: #C4FFC6;
+}
+h1 {
+	font-family: Roboto, arial,"Times New Roman";
+	font-size: 72px;
+	font-style: bold;
+	font-weight: 700;
+	text-align: left;
+	color:  #008037;
+	line-height: 84px;
+}
+h2{
+font-family: Roboto, arial,"Times New Roman";
+	font-size: 35px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: left;
+	color:  #575757;
+	line-height: 35px;
+}
+label
+{
+font-size: 26px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: left;
+	color:  #575757;
+	line-height: 35px;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.vision
+{
+	align: left;
+	margin: 0 auto 0 auto;
+	height: 50px;
+}
+
+.hearing
+{
+	align: left;
+	margin: 0 auto 0 auto;
+	height: 50px;
+}
+
+.speech
+{
+	align: left;
+	margin: 0 auto 0 auto;
+	height: 50px;
+}
